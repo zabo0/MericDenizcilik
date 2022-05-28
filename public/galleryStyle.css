@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    /* padding: 0 150px; */
+}
+
+
+
+
+/*HEADER*/
+
+
+.header{
+    /* background-image: url(sources/); */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.headerNavBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.logo{
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #000;
+    border-radius: 35px;
+    padding-bottom: 5px;
+}
+
+.ul_horizontal{
+    display: flex;
+}
+
+.ul_horizontal li{
+    margin-left: 27px;
+}
+
+a{
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.headerText{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 5.5rem;
+    font-weight: 100;
+    line-height: 0.4;
+    letter-spacing: 2px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.firstLetter_Y{
+    font-size: 7.3rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+#textGallery{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    /* color: #2155CD; */
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+h3{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+
+/* PROPERTIES */
+
+.explanation{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.properties{
+    text-align: center;
+}
+
+h4{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 30px;
+    /* color: #79DAE8; */
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/*  PIN CONTAINER START */
+:root {
+    --card_width: 250px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+}
+
+
+.pin_container {
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+
+    background-color: white;
+}
+
+.card {
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    cursor: pointer;
+}
+
+.card:hover{
+    z-index: 2;
+    box-shadow: 0 8px 16px 5px black;
+    transform: scale(1.01);
+    
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+    overflow: hidden;
+}
+
+.card_small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card_medium {
+    grid-row-end: span var(--card_medium);
+    overflow: hidden;
+}
+
+.card_medium img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+    overflow: hidden;
+}
+
+.card_large img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*  PIN CONTAINER FINISH */
+
+
+
+
+/* MENU */
+#menuIcon{
+    font-size: 25px;
+    display: none;
+    margin-left: 20px;
+}
+
+
+@media only screen and (max-width:1000px){
+    .headerMenu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: #2155cd96;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height .5s;
+    }
+
+    .headerMenu ul li{
+        margin-right: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .headerMenu ul li a{
+        color: #fff;
+    }
+
+    .headerMenu #menuIcon{
+        display: block;
+        cursor: pointer;
+    }
+
+
+}
+
+
+/* HEADER */
+@media only screen and (max-width:1000px){
+    .logo{
+        font-size: 10px;
+        letter-spacing: 2px;
+        border-bottom: 5px solid #000;
+        border-radius: 35px;
+        padding-bottom: 5px;
+    }
+
+    .headerText{
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    h1{
+        font-size: 3.5rem;
+        font-weight: 100;
+        line-height: 0.4;
+        letter-spacing: 2px;
+        font-family: 'Great Vibes', cursive;
+    }
+    
+    .firstLetter_Y{
+        font-size: 5.3rem;
+        font-family: 'Great Vibes', cursive;
+    }
+    
+    h3{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
